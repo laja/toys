@@ -1,0 +1,12 @@
+Goal of this, first version:
+  Collect all of the settings and notes I use. Compress and save them
+
+I need the following modules:
+  - a logger
+  - a configuration reader, format is to be decided
+  - something which checks the folders based on the configuration, and makes a list of all the existing files which should be saved
+  - something which compresses these files into one
+
+if this is done, additional stuff:
+  - encrypt the compressed file
+  - notify about success, failure, etc... (configureable) - dock notification, email, etc...
