@@ -1,27 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import logging
+import Logger
+import Config
+import OutputMethod
 
-def createLogger(loggerName):
-	logger = logging.getLogger(loggerName)
-	logger.setLevel(logging.DEBUG)
-	ch = logging.StreamHandler()
-	ch.setLevel(logging.DEBUG)
-	formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-	ch.setFormatter(formatter)
-	logger.addHandler(ch)
-	return logger
+from ZipBackup import ZipBackup
 
-logger = createLogger('backup.py')
-
-class Backup:
-	def __init__(self):
-		logger.info('A Backup object has been created.')
-
-	def start(self):
-		logger.info('a backup was started')
+logger = Logger.createLogger('backup.py')
 
 if __name__=='__main__':
-	backup = Backup()
-	backup.start()
+	if Config.OUTPUT_METHOD == OutputMethod.ZIP:
+		ZipBackup().start()
+	else:
+		print "not supported OutputMethod"
+
