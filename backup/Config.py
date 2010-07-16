@@ -11,5 +11,6 @@ OUTPUT_FILE_PREFIX = "laja-office-backup-"
 OUTPUT_TIMESTAMP_FORMAT = "%Y-%m-%d-%H-%M-%S"
 
 OUTPUT_METHOD = OutputMethod.ZIP
-ENCRYPTION_METHOD = EncryptionMethod.NONE
+ENCRYPTION_METHOD = EncryptionMethod.AES
 
+PASSWORD_FILE = "/home/lajosu/.backup-key"

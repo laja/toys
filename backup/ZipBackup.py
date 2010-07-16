@@ -1,28 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import os, zipfile, glob
+import os, zipfile, glob, time
 
-from datetime import datetime
-import time
-
-import Logger
-import Config
+from Backup import Backup
+import Logger, Config
 
 logger = Logger.createLogger('ZipBackup.py')
 
-class ZipBackup:
-	def __init__(self):
-		pass
+class ZipBackup(Backup):
 	
-	def start(self):
+	def createSingleFile(self):
 		logger.info("ZipBackup started")
-		d = datetime.now()
 		
-		zipFileName = Config.OUTPUT_FOLDER + \
-			Config.OUTPUT_FILE_PREFIX + \
-			d.strftime(Config.OUTPUT_TIMESTAMP_FORMAT) + \
-			".zip"
+		zipFileName = self.generateOutputFileName() + ".zip"
 		
 		zipFile = zipfile.ZipFile(zipFileName, "w")
 		
@@ -37,6 +28,7 @@ class ZipBackup:
 			
 		zipFile.close()
 		logger.info("zipfile %s is ready." % zipFileName)
+		return zipFileName
 		
 	def addFolderToZip(self, zipFile, folderName):
 		for fileName in glob.glob(folderName+"/*"):

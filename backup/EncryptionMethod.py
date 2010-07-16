@@ -7,4 +7,4 @@ class EncryptionMethod(Enum):
 	pass
 
 NONE = EncryptionMethod("NONE")
-TWOFISH = EncryptionMethod("TWOFISH")
+AES = EncryptionMethod("AES")
