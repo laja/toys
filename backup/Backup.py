@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from datetime import datetime
-import hashlib
+import hashlib, os
 import Config, AesEncryptor, EncryptionMethod
 
 class Backup:
@@ -13,6 +13,7 @@ class Backup:
 		singleFileName = self.createSingleFile()
 		if Config.ENCRYPTION_METHOD != EncryptionMethod.NONE:
 			self.encryptSingleFile(singleFileName)
+			os.remove(singleFileName)
 
 	def generateOutputFileName(self):
 		d = datetime.now()

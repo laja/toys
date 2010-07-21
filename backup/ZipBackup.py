@@ -37,3 +37,4 @@ class ZipBackup(Backup):
 			elif os.path.isdir(fileName):
 				# recursion, we don't support that
 				pass
+				
