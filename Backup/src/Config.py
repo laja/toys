@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import OutputMethod, EncryptionMethod
+from output import OutputMethod
+from encryption import EncryptionMethod
 
 INPUT_FILES = [
 			"/home/lajosu/.bashrc",

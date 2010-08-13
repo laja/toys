@@ -1,0 +1,15 @@
+gitref.org
+
+to download the repo:
+	git clone git@github.com:laja/toys.git
+
+in case of local changes, check changes:
+	git st
+	
+commit if ok:
+	git add .
+	git commit -a -m "changelog text"
+
+upload it to github:
+	git push origin master
+

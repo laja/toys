@@ -3,7 +3,9 @@
 
 from datetime import datetime
 import hashlib, os
-import Config, AesEncryptor, EncryptionMethod
+
+from encryption import AesEncryptor, EncryptionMethod
+import Config
 
 class Backup:
 	def __init__(self):

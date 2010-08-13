@@ -3,9 +3,10 @@
 
 import Logger
 import Config
-import OutputMethod
+from output import OutputMethod
+from output.ZipBackup import ZipBackup
 
-from ZipBackup import ZipBackup
+#from ZipBackup import ZipBackup
 
 logger = Logger.createLogger('backup.py')
 

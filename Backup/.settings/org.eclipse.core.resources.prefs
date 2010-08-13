@@ -1,0 +1,7 @@
+#Fri Aug 13 11:00:18 CEST 2010
+eclipse.preferences.version=1
+encoding//src/Backup.py=utf-8
+encoding//src/Config.py=utf-8
+encoding//src/backup.py=utf-8
+encoding//src/output/OutputMethod.py=utf-8
+encoding//src/output/ZipBackup.py=utf-8

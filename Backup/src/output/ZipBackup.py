@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import os, zipfile, glob, time
+import os, zipfile, glob
 
 from Backup import Backup
 import Logger, Config
