@@ -4,7 +4,7 @@ to download the repo:
 	git clone git@github.com:laja/toys.git
 
 in case of local changes, check changes:
-	git st
+	git status
 	
 commit if ok:
 	git add .

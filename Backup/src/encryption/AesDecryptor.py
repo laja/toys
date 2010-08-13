@@ -3,7 +3,7 @@
 
 # http://eli.thegreenplace.net/2010/06/25/aes-encryption-of-files-in-python-with-pycrypto/
 
-import os, random, struct, sys
+import os, struct, sys
 from Crypto.Cipher import AES
 
 import Logger, Backup
