@@ -2,3 +2,5 @@ requirement:
 mechanize lib
 Ubuntu:
 sudo apt-get install python-mechanize 
+
+test mod
