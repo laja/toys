@@ -5,15 +5,15 @@ from datetime import date
 from dateutil.rrule import rrule, DAILY
 
 # the people who can be used for some work :)
-NAMES = ["András", "Benno", "Bogdán", "Gergely", "Lajos", "Krisz", "Krisztián", "Thomas"]
+NAMES = ["András", "Benno", "Bogdán", "Gábor", "Lajos", "Krisz", "Krisztián", "Thomas"]
 
 # the index of the person who should be the first to pick
 # (indexing starts from zero as usual)
-STARTING_INDEX = 3
+STARTING_INDEX = 0
 
 # this is the interval we use to generate the schedule
-START_DATE = date(2010,11,1)
-END_DATE = date(2010,11,30)
+START_DATE = date(2010,12,3)
+END_DATE = date(2010,12,23)
 
 # the official public holidays for the year & the days when we are not in
 HOLIDAYS = [date(2010,8,20), date(2010,9,9), date(2010,9,10), date(2010,10,23), date(2010,11,1), date(2010,12,25), date(2010,12,26)]
